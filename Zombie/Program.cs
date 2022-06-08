@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// TODO: 1.增加僵尸的种类 2.增加植物的种类 3.增加金钱系统
 namespace Zombie
 {
     public enum CharacterName
