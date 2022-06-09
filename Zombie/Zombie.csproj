@@ -204,6 +204,9 @@
   <ItemGroup>
     <None Include="Resources\Peashooter.gif" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\card_repeaterpea.png" />
+    <Content Include="Resources\card_threepeashooter.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

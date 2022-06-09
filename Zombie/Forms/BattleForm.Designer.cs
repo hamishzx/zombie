@@ -64,6 +64,7 @@
             // repeaterBox
             // 
             this.repeaterBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.repeaterBox.Image = global::Zombie.Properties.Resources.card_repeaterpea;
             resources.ApplyResources(this.repeaterBox, "repeaterBox");
             this.repeaterBox.Name = "repeaterBox";
             this.repeaterBox.TabStop = false;
@@ -72,6 +73,7 @@
             // threePeashooterBox
             // 
             this.threePeashooterBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.threePeashooterBox.Image = global::Zombie.Properties.Resources.card_threepeashooter;
             resources.ApplyResources(this.threePeashooterBox, "threePeashooterBox");
             this.threePeashooterBox.Name = "threePeashooterBox";
             this.threePeashooterBox.TabStop = false;
