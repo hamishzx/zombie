@@ -21,7 +21,7 @@ namespace Zombie
         public override void AddCharacterAttr()
         {
             CharacterBaseAttr attr = FactoryManager.AttrFactory.GetCharacterBaseAttr(mT);
-            ICharacterAttr iattr = new ICharacterAttr(attr, 100);
+            ICharacterAttr iattr = new ICharacterAttr(attr, attr.MaxHP);
             mCharacter.Attr = iattr;
             mCharacter.Position = mSpawnPosition;
             mCharacter.PosRow = mPosRow;
