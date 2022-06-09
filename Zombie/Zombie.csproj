@@ -66,6 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimateImage.cs" />
+    <Compile Include="CharacterSystem\Botany\Repeater.cs" />
+    <Compile Include="CharacterSystem\Botany\ThreePeashooter.cs" />
+    <Compile Include="CharacterSystem\Bullet\DoubleBullet.cs" />
     <Compile Include="CharacterSystem\Bullet\IBullet.cs" />
     <Compile Include="CharacterSystem\Bullet\SingleBullet.cs" />
     <Compile Include="CampSystem\CampSystem.cs" />
@@ -75,6 +78,7 @@
     <Compile Include="CharacterSystem\Attr\BulletBaseAttr.cs" />
     <Compile Include="CharacterSystem\Attr\CharacterBaseAttr.cs" />
     <Compile Include="CharacterSystem\Attr\ICharacterAttr.cs" />
+    <Compile Include="CharacterSystem\Bullet\TripleBullet.cs" />
     <Compile Include="CharacterSystem\Enemy\EnemyConeheadZombie.cs" />
     <Compile Include="Factory\Bullet\BulletAttrFactory.cs" />
     <Compile Include="Factory\Bullet\BulletBuilder.cs" />
