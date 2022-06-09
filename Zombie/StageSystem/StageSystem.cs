@@ -10,6 +10,9 @@ namespace Zombie
         int mLv = 1;
         private int mCountOfEnemyKilled=0;
         IStageHandler mRootHandler;
+
+        public int CountOfEnemyKilledBefore { get; set; } = 0;
+
         public int countOfEnemyKilled
         {
             set
@@ -22,6 +25,7 @@ namespace Zombie
             base.Init();
             InitStageChain();
             mFacade.RegisterObserver(GameEventType.EnemyKilled, new EnemyKilledObserverStageSystem(this));
+            mFacade.RegisterObserver(GameEventType.NewStage, new NewStageObserverStageSystem(this));
         }
 
         public override void Update()
@@ -58,6 +62,7 @@ namespace Zombie
         {
             
             mLv++;
+            GameFacade.Insance.NotifySubject(GameEventType.NewStage);
            // mFacade.NotifySubject(GameEventType.NewStage);
         }
     }

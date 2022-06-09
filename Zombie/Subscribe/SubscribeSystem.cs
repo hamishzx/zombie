@@ -46,7 +46,7 @@ namespace Zombie
                         //mGameEvents.Add(GameEventType.SoldierKilled, new SoldierKilledSubject());
                         break;
                     case GameEventType.NewStage:
-                        //mGameEvents.Add(GameEventType.NewStage, new NewStageSubject());
+                        mGameEvents.Add(GameEventType.NewStage, new NewStageSubject());
                         break;
                     case GameEventType.GameOver:
                     //mGameEvents.Add(GameEventType.GameOver, new GameOverSubject());
