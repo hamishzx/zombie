@@ -35,7 +35,7 @@ namespace Zombie
 
             int lv = 1;
             NormalStageHandler handler1 = new NormalStageHandler(this, lv++, 3, CharacterName.nZombie, 6, 0.05f);
-            NormalStageHandler handler2 = new NormalStageHandler(this, lv++, 6, CharacterName.nZombie, 12, 0.1f);
+            NormalStageHandler handler2 = new NormalStageHandler(this, lv++, 6, CharacterName.nConeheadZombie, 12, 0.1f);
             NormalStageHandler handler3 = new NormalStageHandler(this, lv++, 100, CharacterName.nZombie, 100, 1f);
 
 
