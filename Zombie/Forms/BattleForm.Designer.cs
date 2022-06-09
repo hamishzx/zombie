@@ -33,7 +33,11 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.repeaterBox = new System.Windows.Forms.PictureBox();
+            this.threePeashooterBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repeaterBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.threePeashooterBox)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -57,9 +61,27 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // repeaterBox
+            // 
+            this.repeaterBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.repeaterBox, "repeaterBox");
+            this.repeaterBox.Name = "repeaterBox";
+            this.repeaterBox.TabStop = false;
+            this.repeaterBox.Click += new System.EventHandler(this.repeaterBox_Click);
+            // 
+            // threePeashooterBox
+            // 
+            this.threePeashooterBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.threePeashooterBox, "threePeashooterBox");
+            this.threePeashooterBox.Name = "threePeashooterBox";
+            this.threePeashooterBox.TabStop = false;
+            this.threePeashooterBox.Click += new System.EventHandler(this.threePeashooterBox_Click);
+            // 
             // BattleForm
             // 
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.threePeashooterBox);
+            this.Controls.Add(this.repeaterBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Name = "BattleForm";
@@ -68,10 +90,15 @@
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BattleForm_MouseClick);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BattleForm_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repeaterBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.threePeashooterBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
+        private System.Windows.Forms.PictureBox threePeashooterBox;
+
+        private System.Windows.Forms.PictureBox repeaterBox;
 
         #endregion
 

@@ -14,7 +14,8 @@ namespace Zombie
         nConeheadZombie,
         nBucketheadZombie,
         nPeashooter,
-        nRepeater
+        nRepeater,
+        nThreePeashooter
     }
     static class Program
     {
