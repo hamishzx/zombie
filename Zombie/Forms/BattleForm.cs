@@ -150,14 +150,14 @@ namespace Zombie
         private void repeaterBox_Click(object sender, EventArgs e)
         {
             currBotany = CharacterName.nRepeater;
-            currentMap = new Bitmap( "images/Plants/Repeater/Repeater.gif");
+            currentMap = new Bitmap("images/Plants/Repeater/Repeater.gif");
             isBuild = true;
         }
 
         private void threePeashooterBox_Click(object sender, EventArgs e)
         {
             currBotany = CharacterName.nThreePeashooter;
-            currentMap = new Bitmap( "images/Plants/ThreePeashooter/ThreePeashooter.gif");
+            currentMap = new Bitmap("images/Plants/Threepeater/Threepeater.gif");
             isBuild = true;
         }
     }
