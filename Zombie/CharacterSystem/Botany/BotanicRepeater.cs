@@ -6,13 +6,17 @@ using System.Text;
 
 namespace Zombie
 {
+    /// <summary>
+    /// This is a historically reserved class name, BotanicRepeater is its original name
+    /// However, it should be the class stand for peashooter not repeater, hence edited class content but name
+    /// </summary>
     class BotanicRepeater : IBotany
     {
         private Point des;
 
         public BotanicRepeater()
         {
-            idleimg = "images/Plants/Repeater/Repeater.gif";
+            idleimg = "images/Plants/Peashooter/Peashooter.gif";
             Image t=Image.FromFile(idleimg);
             imgwidth = t.Width;
             imgheight = t.Height;

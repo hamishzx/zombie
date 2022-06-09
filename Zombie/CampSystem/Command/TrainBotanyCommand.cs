@@ -21,7 +21,7 @@ namespace Zombie
         {
             switch (mBotanyType)
             {
-                case CharacterName.nRepeater:
+                case CharacterName.nPeashooter:
                     FactoryManager.BotanyFactory.CreateCharacter<BotanicRepeater>(mPosition, RowPos, GameFacade.Insance.Currform);
                     break;
                 default:
