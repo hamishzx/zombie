@@ -8,24 +8,48 @@
  * It may direct problems if use outside specific environment
  * **NO** reference value
  * ===============================================================
- * Economy System main class, using Chain of Responsibility Pattern
+ * Economy System main class, using State Pattern
  * ----------------------------------------------------------------*/
 
 #endregion
 
 using System.Collections.Generic;
 
-namespace Zombie.EconomySystem
+namespace Zombie
 {
-    class EconomySystem : IGameSystem
+    public class EconomySystem : IGameSystem
     {
-        private Dictionary<EcoEventType, ISubject> _ecoEvents = new Dictionary<EcoEventType, ISubject>();
+        private int _currGold = 0;
+        public int currGold
+        {
+            get => _currGold;
+            set => _currGold = value;
+        }
 
         public override void Init()
         {
             base.Init();
+            InitEconomyChain();
         }
-        
-        
+
+        public void InitEconomyChain()
+        {
+            
+        }
+
+        public void raiseGold(int qty)
+        {
+            currGold += qty;
+        }
+
+        public void deductGold(int qty)
+        {
+            currGold -= qty;
+        }
+
+        public void GoldIsEnough()
+        {
+            
+        }
     }
 }
