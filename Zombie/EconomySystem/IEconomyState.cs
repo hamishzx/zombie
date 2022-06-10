@@ -15,12 +15,14 @@ namespace Zombie
 {
     public abstract class IEconomyState
     {
-        private readonly EconomySystem _economySystem;
-        private readonly int _raiseSpeed;
+        protected readonly EconomySystem _economySystem;
+        protected readonly int _raiseSpeed;
+        protected readonly int _switchBorder;
         protected IEconomyState(EconomySystem economySystem, int raiseSpeed, int switchBorder)
         {
             _economySystem = economySystem;
             _raiseSpeed = raiseSpeed;
+            _switchBorder = switchBorder;
         }
 
         protected abstract void StartState();
@@ -32,7 +34,7 @@ namespace Zombie
             _economySystem.currGold += _raiseSpeed;
         }
 
-        protected void Handle(bool ready)
+        public void Handle(bool ready)
         {
             if (ready)
             {
