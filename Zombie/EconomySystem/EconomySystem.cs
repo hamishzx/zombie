@@ -19,7 +19,7 @@ namespace Zombie
 {
     public class EconomySystem : IGameSystem
     {
-        private int _currGold = 0;
+        private int _currGold;
         private IEconomyState _currState;
         private bool _ready;
         public int currGold
@@ -43,12 +43,14 @@ namespace Zombie
         public override void Init()
         {
             base.Init();
-            InitEconomyChain();
+            InitEconomy();
         }
 
-        public void InitEconomyChain()
+        public void InitEconomy()
         {
-            
+            currGold = 200;
+            _ready = true;
+            _currState = new ReadyState(this, 10, 100);
         }
 
         public void raiseGold(int qty)
