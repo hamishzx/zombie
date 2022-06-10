@@ -102,6 +102,7 @@ namespace Zombie
             {
                 currentPt.X = e.Location.X - currentMap.Width / 2;
                 if (currentPt.X < 250) currentPt.X = 250;
+                if (currentPt.X > 980) currentPt.X = 980;
                 currentPt.Y = e.Location.Y - currentMap.Height / 2;
                 
                 int i;
