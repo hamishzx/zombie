@@ -7,6 +7,7 @@ namespace Zombie
     public enum GameEventType
     {
         Null,
+        CreateBotany,
         EnemyKilled,
         SoldierKilled,
         NewStage,

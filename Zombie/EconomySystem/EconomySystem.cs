@@ -17,11 +17,6 @@ using System.Collections.Generic;
 
 namespace Zombie.EconomySystem
 {
-    public enum EcoEventType
-    {
-        AutoRaise,
-        CreateBotany
-    }
     class EconomySystem : IGameSystem
     {
         private Dictionary<EcoEventType, ISubject> _ecoEvents = new Dictionary<EcoEventType, ISubject>();
