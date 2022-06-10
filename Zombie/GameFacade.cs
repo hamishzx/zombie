@@ -25,17 +25,20 @@ namespace Zombie
         private CampSystem mCampSystem;
         private CharacterSystem mCharacterSystem;
         private SubscribeSystem mGameEventSystem;
-         private StageSystem mStageSystem;
+        private StageSystem mStageSystem;
+        private EconomySystem mEconomySystem;
         public void Init()
         {
             mCampSystem = new CampSystem();
             mCharacterSystem = new CharacterSystem();  
             mGameEventSystem = new SubscribeSystem();
             mStageSystem = new StageSystem();
+            mEconomySystem = new EconomySystem();
             mCampSystem.Init();
             mCharacterSystem.Init();
             mGameEventSystem.Init();
             mStageSystem.Init();
+            mEconomySystem.Init();
         }
         public void UpdateRender(Graphics g)
         {
@@ -48,6 +51,7 @@ namespace Zombie
             mCharacterSystem.Update();
             mGameEventSystem.Update();
             mStageSystem.Update();
+            mEconomySystem.Update();
         }
         public void Release()
         {
@@ -55,6 +59,7 @@ namespace Zombie
             mCharacterSystem.Release();
             mGameEventSystem.Release();
             mStageSystem.Release();
+            mEconomySystem.Release();
         }
         public void AddBotany(IBotany botany)
         {
