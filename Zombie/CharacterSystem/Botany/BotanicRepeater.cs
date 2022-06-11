@@ -31,7 +31,7 @@ namespace Zombie
             //System.Diagnostics.Debug.Assert(false, "生产子弹");
             des.X = Position.X + imgwidth / 2;
             des.Y = Position.Y;
-            GameFacade.Insance.GetBullet(typeof(SingleBullet), des, new Point(1300, Position.Y), GameFacade.Insance.Currform);
+            GameFacade.Instance.GetBullet(typeof(SingleBullet), des, new Point(1300, Position.Y), GameFacade.Instance.Currform);
         }
         protected override void PlaySound()
         {

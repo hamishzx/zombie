@@ -62,7 +62,7 @@ namespace Zombie
         {
             
             mLv++;
-            GameFacade.Insance.NotifySubject(GameEventType.NewStage);
+            GameFacade.Instance.NotifySubject(GameEventType.NewStage);
            // mFacade.NotifySubject(GameEventType.NewStage);
         }
     }

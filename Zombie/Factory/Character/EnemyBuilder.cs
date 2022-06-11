@@ -28,7 +28,7 @@ namespace Zombie
 
         public override void AddInCharacterSystem()
         {
-            GameFacade.Insance.AddEnemy(mCharacter as IEnemy);
+            GameFacade.Instance.AddEnemy(mCharacter as IEnemy);
         }
 
         public override ICharacter GetResult()

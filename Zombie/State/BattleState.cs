@@ -14,7 +14,7 @@ namespace Zombie
 
         public override void EndState()
         {
-            GameFacade.Insance.Release();
+            GameFacade.Instance.Release();
             myform.Close();
             
         }

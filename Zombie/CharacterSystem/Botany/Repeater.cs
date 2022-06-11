@@ -33,7 +33,7 @@ namespace Zombie
         {
             _point.X = Position.X + imgwidth / 2;
             _point.Y = Position.Y;
-            GameFacade.Insance.GetBullet(typeof(DoubleBullet), _point, new Point(1300, Position.Y), GameFacade.Insance.Currform);
+            GameFacade.Instance.GetBullet(typeof(DoubleBullet), _point, new Point(1300, Position.Y), GameFacade.Instance.Currform);
         }
 
         protected override void PlaySound()

@@ -46,7 +46,7 @@ namespace Zombie
         public override void Killed()
         {
             base.Killed();
-            GameFacade.Insance.NotifySubject(GameEventType.EnemyKilled);
+            GameFacade.Instance.NotifySubject(GameEventType.EnemyKilled);
         }
     }
 }

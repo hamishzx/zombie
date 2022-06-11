@@ -31,8 +31,8 @@ namespace Zombie
             this.Height = bm.Height+5;
             
             SetRow();
-            GameFacade.Insance.Init();
-            GameFacade.Insance.Currform = this;
+            GameFacade.Instance.Init();
+            GameFacade.Instance.Currform = this;
         }
 
         private void BattleForm_Paint(object sender, PaintEventArgs e)
@@ -43,7 +43,7 @@ namespace Zombie
             g.Clear(this.BackColor);
             
             g.DrawImage(Properties.Resources.background1, 0, 0, Properties.Resources.background1.Width, Properties.Resources.background1.Height);
-            GameFacade.Insance.UpdateRender(g);
+            GameFacade.Instance.UpdateRender(g);
             if(isBuild)
             g.DrawImage(currentMap, currentPt);
             myBuffer.Render(e.Graphics);  //呈现图像至关联的Graphics
@@ -76,7 +76,7 @@ namespace Zombie
             Plantrender.Animate();
             PeaBulletrender.Animate();*/
             //mCharacterSystem.Update();
-            GameFacade.Insance.Update();
+            GameFacade.Instance.Update();
 
         }
 
@@ -102,17 +102,17 @@ namespace Zombie
                 currentPt.Y = e.Location.Y - currentMap.Height / 2;
                 
                 int i;
-                for ( i = 0; i < GameFacade.Insance.botanyrowPos.Length; i++)
+                for ( i = 0; i < GameFacade.Instance.botanyrowPos.Length; i++)
                 {
-                    if(System.Math.Abs(currentPt.Y - GameFacade.Insance.botanyrowPos[i]) <= currentMap.Height/2)
+                    if(System.Math.Abs(currentPt.Y - GameFacade.Instance.botanyrowPos[i]) <= currentMap.Height/2)
                     {
                         break;
                     }
                 }
                 if (i < -1) i = 0;
-                if (i >= GameFacade.Insance.botanyrowPos.Length) i = i - 1;
-                currentPt.Y = GameFacade.Insance.botanyrowPos[i];
-                GameFacade.Insance.MCampSystem.SetCampCommand(currBotany, currentPt,i);
+                if (i >= GameFacade.Instance.botanyrowPos.Length) i = i - 1;
+                currentPt.Y = GameFacade.Instance.botanyrowPos[i];
+                GameFacade.Instance.MCampSystem.SetCampCommand(currBotany, currentPt,i);
                 isBuild = false;
                 currentMap.Dispose();
                 currentMap = null;
@@ -132,16 +132,16 @@ namespace Zombie
         }
         public void SetRow()
         {
-            GameFacade.Insance.botanyrowPos = new int[5];
-            GameFacade.Insance.enyrowPos = new int[5];
+            GameFacade.Instance.botanyrowPos = new int[5];
+            GameFacade.Instance.enyrowPos = new int[5];
             Bitmap plant = new Bitmap("images/Plants/Repeater/Repeater.gif");
             Bitmap eny = new Bitmap("images/Zombies/Zombie/Zombie.gif");
             int i;
             int rowheight = (this.Height - 53) / 5;
             for(i=1;i<=5;i++)
             {
-                GameFacade.Insance.enyrowPos[i - 1] = 10 + rowheight * i  - eny.Height ;
-                GameFacade.Insance.botanyrowPos[i-1] = 10 + rowheight*i - plant.Height ; 
+                GameFacade.Instance.enyrowPos[i - 1] = 10 + rowheight * i  - eny.Height ;
+                GameFacade.Instance.botanyrowPos[i-1] = 10 + rowheight*i - plant.Height ; 
             }
             plant.Dispose();
             eny.Dispose();
