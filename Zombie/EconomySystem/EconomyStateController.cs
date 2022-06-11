@@ -15,21 +15,21 @@ namespace Zombie
 {
     public class EconomyStateController
     {
-        private IEconomyState _economyState;
-        public IEconomyState economyState
+        private IEconomyState _currCurrEconomyState;
+        public IEconomyState currEconomyState
         {
-            get => _economyState;
-            set => _economyState = value;
+            get => _currCurrEconomyState;
+            set => _currCurrEconomyState = value;
         }
 
-        public EconomyStateController(IEconomyState economyState)
+        public EconomyStateController(IEconomyState currCurrEconomyState)
         {
-            _economyState = economyState;
+            _currCurrEconomyState = currCurrEconomyState;
         }
 
-        public void Request(bool ready)
+        public void Request()
         {
-            _economyState.Handle(ready);
+            _currCurrEconomyState.Handle(this);
         }
     }
 }

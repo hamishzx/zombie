@@ -15,12 +15,14 @@
 
 using System.Collections.Generic;
 
+
 namespace Zombie
 {
     public class EconomySystem : IGameSystem
     {
         private int _currGold;
-        private IEconomyState _currState;
+        private IEconomyState _initState;
+        private EconomyStateController _controller;
         private bool _ready;
         public int currGold
         {
@@ -30,8 +32,8 @@ namespace Zombie
 
         public IEconomyState currState
         {
-            get => _currState;
-            set => _currState = value;
+            get => _initState;
+            set => _initState = value;
         }
 
         public bool ready
@@ -46,11 +48,18 @@ namespace Zombie
             InitEconomy();
         }
 
-        public void InitEconomy()
+        public override void Update()
         {
-            currGold = 200;
+            base.Update();
+            _controller.Request();
+        }
+
+        private void InitEconomy()
+        {
+            currGold = 10;
             _ready = true;
-            _currState = new ReadyState(this, 10, 100);
+            _initState = new ProducingState(this, 5, 100);
+            _controller = new EconomyStateController(_initState);
         }
 
         public void raiseGold(int qty)
