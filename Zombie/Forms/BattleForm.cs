@@ -163,7 +163,7 @@ namespace Zombie
 
         private void EcoUpdateTimer_Tick(object sender, EventArgs e)
         {
-            GameFacade.Insance.EcoUpdate();
+            GameFacade.Instance.EcoUpdate();
         }
 
         private void GoldDisplay_TextChanged(object sender, EventArgs e)
