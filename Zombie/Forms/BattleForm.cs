@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 using System.Drawing.Drawing2D;
+using Zombie.Properties;
 
 namespace Zombie
 {
@@ -90,7 +91,7 @@ namespace Zombie
         {
             
             currBotany = CharacterName.nPeashooter;
-            currentMap = new Bitmap( "images/Plants/Peashooter/Peashooter.gif");
+            currentMap = Resources.Peashooter;
             _currBotanyCost = 100;
             BuildOrNot(_currBotanyCost);
         }
@@ -137,8 +138,8 @@ namespace Zombie
         {
             GameFacade.Instance.botanyrowPos = new int[5];
             GameFacade.Instance.enyrowPos = new int[5];
-            Bitmap plant = new Bitmap("images/Plants/Repeater/Repeater.gif");
-            Bitmap eny = new Bitmap("images/Zombies/Zombie/Zombie.gif");
+            Bitmap plant = Resources.Peashooter;
+            Bitmap eny = Resources.Zombie;
             int i;
             int rowheight = (this.Height - 53) / 5;
             for(i=1;i<=5;i++)
@@ -153,7 +154,7 @@ namespace Zombie
         private void repeaterBox_Click(object sender, EventArgs e)
         {
             currBotany = CharacterName.nRepeater;
-            currentMap = new Bitmap("images/Plants/Repeater/Repeater.gif");
+            currentMap = Resources.Repeater;
             _currBotanyCost = 200;
             BuildOrNot(_currBotanyCost);
         }
@@ -161,7 +162,7 @@ namespace Zombie
         private void threePeashooterBox_Click(object sender, EventArgs e)
         {
             currBotany = CharacterName.nThreePeashooter;
-            currentMap = new Bitmap("images/Plants/Threepeater/Threepeater.gif");
+            currentMap = Resources.ThreePeashooter;
             _currBotanyCost = 325;
             BuildOrNot(_currBotanyCost);
         }
