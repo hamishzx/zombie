@@ -23,7 +23,6 @@ namespace Zombie
         private int _currGold;
         private IEconomyState _initState;
         private EconomyStateController _controller;
-        private bool _ready;
         public int currGold
         {
             get => _currGold;
@@ -34,12 +33,6 @@ namespace Zombie
         {
             get => _initState;
             set => _initState = value;
-        }
-
-        public bool ready
-        {
-            get => _ready;
-            set => _ready = value;
         }
         
         public override void Init()
@@ -56,9 +49,8 @@ namespace Zombie
 
         private void InitEconomy()
         {
-            currGold = 10;
-            _ready = true;
-            _initState = new ProducingState(this, 5, 100);
+            currGold = 300;
+            _initState = new ReadyState(this, 10, 100);
             _controller = new EconomyStateController(_initState);
         }
 

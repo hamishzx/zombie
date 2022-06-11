@@ -25,7 +25,7 @@ namespace Zombie
 
         protected override void EndState(EconomyStateController controller)
         {
-            controller.currEconomyState = new ProducingState(_economySystem, 5, 100);
+            controller.currEconomyState = new ProducingState(_economySystem, 20, 100);
         }
 
         protected override void CheckSwitchState(EconomyStateController controller)
