@@ -87,6 +87,7 @@
             this.GoldDisplay.BackColor = System.Drawing.SystemColors.Control;
             this.GoldDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GoldDisplay.Name = "GoldDisplay";
+            this.GoldDisplay.TextChanged += new System.EventHandler(this.GoldDisplay_TextChanged);
             // 
             // EcoUpdateTimer
             // 
