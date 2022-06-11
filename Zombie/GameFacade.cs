@@ -116,6 +116,14 @@ namespace Zombie
                 //System.Diagnostics.Debug.WriteLine(false, "生产子弹");
                 blt = FactoryManager.BulletFactory.CreateBullet<SingleBullet>(position, targetPosition, fm);
             }
+            if (blt == null && t.Name == "DoubleBullet")
+            {
+                blt = FactoryManager.BulletFactory.CreateBullet<DoubleBullet>(position, targetPosition, fm);
+            }
+            if (blt == null && t.Name == "TripleBullet")
+            {
+                blt = FactoryManager.BulletFactory.CreateBullet<TripleBullet>(position, targetPosition, fm);
+            }
                 return blt;
         }
     }

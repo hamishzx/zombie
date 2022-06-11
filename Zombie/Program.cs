@@ -4,13 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-/*  TODO: as below
-    1.增加僵尸的种类 WIP
-    路障僵尸 ConeheadZombie
-    2.增加植物的种类 WIP
-    双发射手 Repeater
-    三发射手 ThreePeashooter
-    3.增加金钱系统 WIP */
+/*  TODO: Work as below
+    1.增加僵尸的种类 Merged
+    2.增加植物的种类 Merged
+    3.增加金钱系统 Merged */
 
 namespace Zombie
 {
