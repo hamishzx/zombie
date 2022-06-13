@@ -36,6 +36,7 @@
             this.repeaterBox = new System.Windows.Forms.PictureBox();
             this.threePeashooterBox = new System.Windows.Forms.PictureBox();
             this.GoldDisplay = new System.Windows.Forms.Label();
+            this.EcoUpdateTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repeaterBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.threePeashooterBox)).BeginInit();
@@ -87,6 +88,12 @@
             this.GoldDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GoldDisplay.Name = "GoldDisplay";
             // 
+            // EcoUpdateTimer
+            // 
+            this.EcoUpdateTimer.Enabled = true;
+            this.EcoUpdateTimer.Interval = 1000;
+            this.EcoUpdateTimer.Tick += new System.EventHandler(this.EcoUpdateTimer_Tick);
+            // 
             // BattleForm
             // 
             resources.ApplyResources(this, "$this");
@@ -106,6 +113,8 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Timer EcoUpdateTimer;
 
         private System.Windows.Forms.Label GoldDisplay;
 

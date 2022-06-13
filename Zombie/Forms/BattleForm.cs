@@ -160,5 +160,10 @@ namespace Zombie
             currentMap = new Bitmap("images/Plants/Threepeater/Threepeater.gif");
             isBuild = true;
         }
+
+        private void EcoUpdateTimer_Tick(object sender, EventArgs e)
+        {
+            GameFacade.Insance.EcoUpdate();
+        }
     }
 }

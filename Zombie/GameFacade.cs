@@ -51,6 +51,10 @@ namespace Zombie
             mCharacterSystem.Update();
             mGameEventSystem.Update();
             mStageSystem.Update();
+        }
+
+        public void EcoUpdate()
+        {
             mEconomySystem.Update();
         }
         public void Release()
