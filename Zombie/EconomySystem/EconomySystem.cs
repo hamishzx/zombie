@@ -8,7 +8,7 @@
  * It may direct problems if use outside specific environment
  * **NO** reference value
  * ===============================================================
- * Economy System main class, using State Pattern
+ * Economy System main class, the system is using State Pattern
  * ----------------------------------------------------------------*/
 
 #endregion
@@ -27,12 +27,6 @@ namespace Zombie
         {
             get => _currGold;
             set => _currGold = value;
-        }
-
-        public IEconomyState currState
-        {
-            get => _initState;
-            set => _initState = value;
         }
         
         public override void Init()
