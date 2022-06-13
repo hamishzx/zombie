@@ -27,11 +27,6 @@ namespace Zombie
 
         private void BattleForm_Load(object sender, EventArgs e)
         {
-            this.ControlBox = false;
-            Bitmap bm=Properties.Resources.background1;
-            this.Width= bm.Width+5;
-            this.Height = bm.Height+5;
-            
             SetRow();
             GameFacade.Instance.Init();
             GameFacade.Instance.Currform = this;

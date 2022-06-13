@@ -108,6 +108,7 @@
             // 
             // BattleForm
             // 
+            this.BackgroundImage = global::Zombie.Properties.Resources.background1;
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.GoldDisplay);
             this.Controls.Add(this.threePeashooterBox);
