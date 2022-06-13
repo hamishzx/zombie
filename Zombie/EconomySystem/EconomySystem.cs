@@ -21,6 +21,7 @@ namespace Zombie
     {
         private int _currGold = 0;
         private IEconomyState _currState;
+        private bool _ready;
         public int currGold
         {
             get => _currGold;
@@ -31,6 +32,12 @@ namespace Zombie
         {
             get => _currState;
             set => _currState = value;
+        }
+
+        public bool ready
+        {
+            get => _ready;
+            set => _ready = value;
         }
         
         public override void Init()

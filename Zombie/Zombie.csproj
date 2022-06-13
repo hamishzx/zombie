@@ -80,10 +80,11 @@
     <Compile Include="CharacterSystem\Attr\ICharacterAttr.cs" />
     <Compile Include="CharacterSystem\Bullet\TripleBullet.cs" />
     <Compile Include="CharacterSystem\Enemy\EnemyConeheadZombie.cs" />
-    <Compile Include="EconomySystem\EconomyAttr.cs" />
     <Compile Include="EconomySystem\EconomyStateController.cs" />
     <Compile Include="EconomySystem\EconomySystem.cs" />
     <Compile Include="EconomySystem\IEconomyState.cs" />
+    <Compile Include="EconomySystem\ProducingState.cs" />
+    <Compile Include="EconomySystem\ReadyState.cs" />
     <Compile Include="Factory\Bullet\BulletAttrFactory.cs" />
     <Compile Include="Factory\Bullet\BulletBuilder.cs" />
     <Compile Include="Factory\Bullet\BulletBuilderDirector.cs" />

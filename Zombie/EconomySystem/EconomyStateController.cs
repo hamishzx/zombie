@@ -16,5 +16,20 @@ namespace Zombie
     public class EconomyStateController
     {
         private IEconomyState _economyState;
+        public IEconomyState economyState
+        {
+            get => _economyState;
+            set => _economyState = value;
+        }
+
+        public EconomyStateController(IEconomyState economyState)
+        {
+            _economyState = economyState;
+        }
+
+        public void Request(bool ready)
+        {
+            _economyState.Handle(ready);
+        }
     }
 }
