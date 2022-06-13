@@ -15,6 +15,17 @@ namespace Zombie
         private int mSpawnTime = 5;
         private float mSpawnTimer = 0;
         private int mCountSpawned = 0;
+        
+        /// <summary>
+        /// Stage handler, Chain of Responsibility Pattern
+        /// used to switch stage
+        /// </summary>
+        /// <param name="stageSystem">inherited from IGameSystem</param>
+        /// <param name="lv">level</param>
+        /// <param name="countToFinished">kill-count to finish current stage</param>
+        /// <param name="et">enemy type</param>
+        /// <param name="count">max enemy in stage</param>
+        /// <param name="speed">enemy spawn time deduct on every UpdateStage()</param>
         public NormalStageHandler(StageSystem stageSystem, int lv, int countToFinished, CharacterName et, int count, float speed)
             : base(stageSystem, lv, countToFinished)
         {
@@ -46,6 +57,9 @@ namespace Zombie
             {
                 case CharacterName.nZombie:
                     FactoryManager.EnemyFactory.CreateCharacter<EnemyZombie>(mPosition,t, GameFacade.Insance.Currform);
+                    break;
+                case CharacterName.nConeheadZombie:
+                    FactoryManager.EnemyFactory.CreateCharacter<EnemyConeheadZombie>(mPosition, t, GameFacade.Insance.Currform);
                     break;
                 default:
                     break;
