@@ -35,6 +35,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.repeaterBox = new System.Windows.Forms.PictureBox();
             this.threePeashooterBox = new System.Windows.Forms.PictureBox();
+            this.GoldDisplay = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repeaterBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.threePeashooterBox)).BeginInit();
@@ -79,9 +80,17 @@
             this.threePeashooterBox.TabStop = false;
             this.threePeashooterBox.Click += new System.EventHandler(this.threePeashooterBox_Click);
             // 
+            // GoldDisplay
+            // 
+            resources.ApplyResources(this.GoldDisplay, "GoldDisplay");
+            this.GoldDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.GoldDisplay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GoldDisplay.Name = "GoldDisplay";
+            // 
             // BattleForm
             // 
             resources.ApplyResources(this, "$this");
+            this.Controls.Add(this.GoldDisplay);
             this.Controls.Add(this.threePeashooterBox);
             this.Controls.Add(this.repeaterBox);
             this.Controls.Add(this.pictureBox1);
@@ -97,6 +106,10 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Label GoldDisplay;
+
+        private System.Windows.Forms.Label label1;
 
         private System.Windows.Forms.PictureBox threePeashooterBox;
 
