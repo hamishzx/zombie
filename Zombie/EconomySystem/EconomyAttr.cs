@@ -11,7 +11,7 @@
 
 #endregion
 
-namespace Zombie.EconomySystem
+namespace Zombie
 {
     public enum EconomyType
     {
