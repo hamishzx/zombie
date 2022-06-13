@@ -11,6 +11,8 @@
 
 #endregion
 
+
+
 namespace Zombie
 {
     public abstract class IEconomyState
@@ -27,26 +29,19 @@ namespace Zombie
 
         protected abstract void StartState();
 
-        protected abstract void EndState();
+        protected abstract void EndState(EconomyStateController controller);
 
         private void RaiseEconomy()
         {
             _economySystem.currGold += _raiseSpeed;
         }
 
-        public void Handle(bool ready)
+        public void Handle(EconomyStateController controller)
         {
-            if (ready)
-            {
-                RaiseEconomy();
-                CheckIsReady();
-            }
-            else
-            {
-                _economySystem.currState.EndState();
-            }
+            RaiseEconomy();
+            CheckSwitchState(controller);
         }
 
-        protected abstract void CheckIsReady();
+        protected abstract void CheckSwitchState(EconomyStateController controller);
     }
 }

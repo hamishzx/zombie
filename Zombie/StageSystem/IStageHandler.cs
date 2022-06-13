@@ -37,8 +37,6 @@ namespace Zombie
         protected virtual void UpdateStage() { }
         private void CheckIsFinished()
         {
-            System.Diagnostics.Debug.WriteLine(mStageSystem.GetCountOfEnemyKilled());
-            System.Diagnostics.Debug.WriteLine(mStageSystem.CountOfEnemyKilledBefore);
             if (mStageSystem.GetCountOfEnemyKilled() - mStageSystem.CountOfEnemyKilledBefore >= mCountToFinished)
             {
                 mStageSystem.EnterNextStage();

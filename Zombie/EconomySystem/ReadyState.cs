@@ -23,16 +23,16 @@ namespace Zombie
             throw new System.NotImplementedException();
         }
 
-        protected override void EndState()
+        protected override void EndState(EconomyStateController controller)
         {
-            _economySystem.currState = new ProducingState(_economySystem, 20, 100);
+            controller.currEconomyState = new ProducingState(_economySystem, 5, 100);
         }
 
-        protected override void CheckIsReady()
+        protected override void CheckSwitchState(EconomyStateController controller)
         {
             if (_economySystem.currGold < _switchBorder)
             {
-                EndState();
+                EndState(controller);
             }
         }
     }
