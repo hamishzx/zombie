@@ -22,7 +22,7 @@ namespace Zombie
 
         public ThreePeashooter()
         {
-            idleimg = "images/Plants/Repeater/Repeater.gif";
+            idleimg = "images/Plants/Threepeater/Threepeater.gif";
             Image img = Image.FromFile(idleimg);
             imgwidth = img.Width;
             imgheight = img.Height;
