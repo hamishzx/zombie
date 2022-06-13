@@ -8,7 +8,7 @@
  * It may direct problems if use outside specific environment
  * **NO** reference value
  * ===============================================================
- * Economy System main class, using Flyweight Pattern
+ * Economy System main class, using Chain of Responsibility Pattern
  * ----------------------------------------------------------------*/
 
 #endregion
