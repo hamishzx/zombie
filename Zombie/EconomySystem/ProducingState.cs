@@ -12,17 +12,20 @@
 #endregion
 
 
+using System;
 
 namespace Zombie
 {
     public class ProducingState : IEconomyState
     {
         public ProducingState(EconomySystem economySystem, int raiseSpeed, int switchBorder) : base(economySystem,
-            raiseSpeed, switchBorder) { }
-        
+            raiseSpeed, switchBorder)
+        {
+        }
+
         protected override void StartState()
         {
-            throw new System.NotImplementedException();
+            // throw new NotImplementedException();
         }
 
         protected override void EndState(EconomyStateController controller)
@@ -32,10 +35,7 @@ namespace Zombie
 
         protected override void CheckSwitchState(EconomyStateController controller)
         {
-            if (_economySystem.currGold > _switchBorder)
-            {
-                EndState(controller);
-            }
+            if (_economySystem.currGold > _switchBorder) EndState(controller);
         }
     }
 }

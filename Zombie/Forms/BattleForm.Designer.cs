@@ -37,6 +37,8 @@
             this.threePeashooterBox = new System.Windows.Forms.PictureBox();
             this.GoldDisplay = new System.Windows.Forms.Label();
             this.EcoUpdateTimer = new System.Windows.Forms.Timer(this.components);
+            this.GoldTwinkleTimer = new System.Windows.Forms.Timer(this.components);
+            this.GoldTwinkleOffTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repeaterBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.threePeashooterBox)).BeginInit();
@@ -95,6 +97,15 @@
             this.EcoUpdateTimer.Interval = 1000;
             this.EcoUpdateTimer.Tick += new System.EventHandler(this.EcoUpdateTimer_Tick);
             // 
+            // GoldTwinkleTimer
+            // 
+            this.GoldTwinkleTimer.Tick += new System.EventHandler(this.GoldTwinkleTimer_Tick);
+            // 
+            // GoldTwinkleOffTimer
+            // 
+            this.GoldTwinkleOffTimer.Interval = 500;
+            this.GoldTwinkleOffTimer.Tick += new System.EventHandler(this.GoldTwinkleOffTimer_Tick);
+            // 
             // BattleForm
             // 
             resources.ApplyResources(this, "$this");
@@ -115,12 +126,14 @@
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.Timer GoldTwinkleOffTimer;
+
+        private System.Windows.Forms.Timer GoldTwinkleTimer;
+
         private System.Windows.Forms.Timer EcoUpdateTimer;
 
         private System.Windows.Forms.Label GoldDisplay;
-
-        private System.Windows.Forms.Label label1;
-
+        
         private System.Windows.Forms.PictureBox threePeashooterBox;
 
         private System.Windows.Forms.PictureBox repeaterBox;

@@ -16,6 +16,7 @@ namespace Zombie
         private bool isBuild=false;
         private Bitmap currentMap;
         private Point currentPt;
+        private int _currBotanyCost;
 
         public BattleForm()
         {
@@ -90,7 +91,8 @@ namespace Zombie
             
             currBotany = CharacterName.nPeashooter;
             currentMap = new Bitmap( "images/Plants/Peashooter/Peashooter.gif");
-            isBuild = true;
+            _currBotanyCost = 100;
+            BuildOrNot(_currBotanyCost);
         }
 
         private void BattleForm_MouseClick(object sender, MouseEventArgs e)
@@ -113,6 +115,7 @@ namespace Zombie
                 if (i >= GameFacade.Instance.botanyrowPos.Length) i = i - 1;
                 currentPt.Y = GameFacade.Instance.botanyrowPos[i];
                 GameFacade.Instance.MCampSystem.SetCampCommand(currBotany, currentPt,i);
+                GameFacade.Instance.MEconomySystem.deductGold(_currBotanyCost);
                 isBuild = false;
                 currentMap.Dispose();
                 currentMap = null;
@@ -151,14 +154,16 @@ namespace Zombie
         {
             currBotany = CharacterName.nRepeater;
             currentMap = new Bitmap("images/Plants/Repeater/Repeater.gif");
-            isBuild = true;
+            _currBotanyCost = 200;
+            BuildOrNot(_currBotanyCost);
         }
 
         private void threePeashooterBox_Click(object sender, EventArgs e)
         {
             currBotany = CharacterName.nThreePeashooter;
             currentMap = new Bitmap("images/Plants/Threepeater/Threepeater.gif");
-            isBuild = true;
+            _currBotanyCost = 325;
+            BuildOrNot(_currBotanyCost);
         }
 
         private void EcoUpdateTimer_Tick(object sender, EventArgs e)
@@ -175,6 +180,31 @@ namespace Zombie
             else
             {
                 GoldDisplay.ForeColor = Color.Red;
+            }
+        }
+
+        private void GoldTwinkleTimer_Tick(object sender, EventArgs e)
+        {
+            GoldDisplay.ForeColor = GoldDisplay.ForeColor != Color.Black ? Color.Black : Color.Red;
+        }
+
+        private void GoldTwinkleOffTimer_Tick(object sender, EventArgs e)
+        {
+            GoldTwinkleTimer.Enabled = false;
+            GoldTwinkleOffTimer.Enabled = false;
+        }
+
+        private void BuildOrNot(int currBotanyCost)
+        {
+            if (GameFacade.Instance.MEconomySystem.GoldIsEnough(currBotanyCost))
+            {
+                isBuild = true;
+            }
+            else
+            {
+                GoldTwinkleTimer.Enabled = true;
+                GoldTwinkleOffTimer.Enabled = true;
+                isBuild = false;
             }
         }
     }

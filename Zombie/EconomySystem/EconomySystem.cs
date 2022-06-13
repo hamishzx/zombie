@@ -13,23 +13,20 @@
 
 #endregion
 
-using System.Collections.Generic;
-
-/* TODO: 植物创建时检查经济是否足够，足够扣减经济，不足闪烁文字提醒
- */
 namespace Zombie
 {
     public class EconomySystem : IGameSystem
     {
+        private EconomyStateController _controller;
         private int _currGold;
         private IEconomyState _initState;
-        private EconomyStateController _controller;
+
         public int currGold
         {
             get => _currGold;
             set => _currGold = value;
         }
-        
+
         public override void Init()
         {
             base.Init();
@@ -49,19 +46,14 @@ namespace Zombie
             _controller = new EconomyStateController(_initState);
         }
 
-        public void raiseGold(int qty)
-        {
-            currGold += qty;
-        }
-
         public void deductGold(int qty)
         {
             currGold -= qty;
         }
 
-        public void GoldIsEnough()
+        public bool GoldIsEnough(int economyCost)
         {
-            
+            return currGold >= economyCost;
         }
     }
 }

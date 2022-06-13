@@ -12,7 +12,6 @@
 #endregion
 
 
-
 namespace Zombie
 {
     public abstract class IEconomyState
@@ -20,6 +19,7 @@ namespace Zombie
         protected readonly EconomySystem _economySystem;
         protected readonly int _raiseSpeed;
         protected readonly int _switchBorder;
+
         protected IEconomyState(EconomySystem economySystem, int raiseSpeed, int switchBorder)
         {
             _economySystem = economySystem;
