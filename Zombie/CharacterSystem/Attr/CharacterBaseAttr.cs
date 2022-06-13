@@ -15,6 +15,14 @@ namespace Zombie
         private string name;
         private int damage;
 
+        /// <summary>
+        /// See ICharacter.Attack() and related func for more information
+        /// </summary>
+        /// <param name="name">name</param>
+        /// <param name="maxHP">maxHP</param>
+        /// <param name="moveSpeed">moveSpeed</param>
+        /// <param name="DmgDescValue">DamageDescentValue, see ICharacterAttr.TakeDamage()</param>
+        /// <param name="damage">damage</param>
         public CharacterBaseAttr(string name, int maxHP, int moveSpeed,int DmgDescValue,int damage)
         {
             this.name = name;
