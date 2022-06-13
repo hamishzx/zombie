@@ -13,13 +13,22 @@ namespace Zombie
         {
             base.Init();
             InitCamp(CharacterName.nPeashooter);
+            InitCamp(CharacterName.nRepeater);
+            InitCamp(CharacterName.nThreePeashooter);
         }
         private void InitCamp(CharacterName botanyType)
         {
+            // seems no use variable
             float trainTime = 0;
             switch (botanyType)
             {
                 case CharacterName.nPeashooter:
+                    trainTime = 3;
+                    break;
+                case CharacterName.nRepeater:
+                    trainTime = 3;
+                    break;
+                case CharacterName.nThreePeashooter:
                     trainTime = 3;
                     break;
                 default:
