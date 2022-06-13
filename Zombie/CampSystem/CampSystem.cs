@@ -12,14 +12,14 @@ namespace Zombie
         public override void Init()
         {
             base.Init();
-            InitCamp(CharacterName.nRepeater);
+            InitCamp(CharacterName.nPeashooter);
         }
         private void InitCamp(CharacterName botanyType)
         {
             float trainTime = 0;
             switch (botanyType)
             {
-                case CharacterName.nRepeater:
+                case CharacterName.nPeashooter:
                     trainTime = 3;
                     break;
                 default:

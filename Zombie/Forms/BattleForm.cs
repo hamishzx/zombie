@@ -88,8 +88,8 @@ namespace Zombie
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             
-            currBotany = CharacterName.nRepeater;
-            currentMap = new Bitmap( "images/Plants/Repeater/Repeater.gif");
+            currBotany = CharacterName.nPeashooter;
+            currentMap = new Bitmap( "images/Plants/Peashooter/Peashooter.gif");
             isBuild = true;
         }
 

@@ -13,6 +13,7 @@ namespace Zombie
         nFlagZombie,
         nConeheadZombie,
         nBucketheadZombie,
+        nPeashooter,
         nRepeater
     }
     static class Program
