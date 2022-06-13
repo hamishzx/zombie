@@ -34,6 +34,8 @@ namespace Zombie
         private void RaiseEconomy()
         {
             _economySystem.currGold += _raiseSpeed;
+            GameFacade.Insance.Currform.Controls["GoldDisplay"].Text = _economySystem.currGold.ToString();
+            GameFacade.Insance.Currform.Controls["GoldDisplay"].Refresh();
         }
 
         public void Handle(EconomyStateController controller)

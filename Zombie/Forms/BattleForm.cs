@@ -165,5 +165,17 @@ namespace Zombie
         {
             GameFacade.Insance.EcoUpdate();
         }
+
+        private void GoldDisplay_TextChanged(object sender, EventArgs e)
+        {
+            if (int.Parse(GoldDisplay.Text) > 100)
+            {
+                GoldDisplay.ForeColor = Color.Black;;
+            }
+            else
+            {
+                GoldDisplay.ForeColor = Color.Red;
+            }
+        }
     }
 }
