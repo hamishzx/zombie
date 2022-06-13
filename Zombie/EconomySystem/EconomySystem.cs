@@ -15,7 +15,8 @@
 
 using System.Collections.Generic;
 
-
+/* TODO: 植物创建时检查经济是否足够，足够扣减经济，不足闪烁文字提醒
+ */
 namespace Zombie
 {
     public class EconomySystem : IGameSystem
