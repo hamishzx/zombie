@@ -20,12 +20,19 @@ namespace Zombie
     public class EconomySystem : IGameSystem
     {
         private int _currGold = 0;
+        private IEconomyState _currState;
         public int currGold
         {
             get => _currGold;
             set => _currGold = value;
         }
 
+        public IEconomyState currState
+        {
+            get => _currState;
+            set => _currState = value;
+        }
+        
         public override void Init()
         {
             base.Init();
