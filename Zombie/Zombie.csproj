@@ -140,8 +140,10 @@
     </Compile>
     <Compile Include="Subscribe\Observer\EnemyKilledObserverStageSystem.cs" />
     <Compile Include="Subscribe\Observer\IObserver.cs" />
+    <Compile Include="Subscribe\Observer\NewStageObserverStageSystem.cs" />
     <Compile Include="Subscribe\Subject\EnemyKilledSubjectcs.cs" />
     <Compile Include="Subscribe\Subject\ISubject.cs" />
+    <Compile Include="Subscribe\Subject\NewStageSubject.cs" />
     <Compile Include="Subscribe\SubscribeSystem.cs" />
     <EmbeddedResource Include="Forms\BattleForm.resx">
       <DependentUpon>BattleForm.cs</DependentUpon>
