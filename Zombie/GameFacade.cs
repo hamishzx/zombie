@@ -12,7 +12,7 @@ namespace Zombie
         private static GameFacade _instance = new GameFacade();
         private bool mIsGameOver = false;
         private Form currform;
-        public static GameFacade Insance { get { return _instance; } }
+        public static GameFacade Instance { get { return _instance; } }
 
         public bool isGameOver { get { return mIsGameOver; } }
 

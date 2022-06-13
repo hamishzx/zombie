@@ -51,15 +51,15 @@ namespace Zombie
         {
             mCountSpawned++;
             int t;
-            t=new Random().Next(0, GameFacade.Insance.enyrowPos.Length);
-            mPosition = new Point(1300, GameFacade.Insance.enyrowPos[t]);
+            t=new Random().Next(0, GameFacade.Instance.enyrowPos.Length);
+            mPosition = new Point(1300, GameFacade.Instance.enyrowPos[t]);
             switch (mEnemyType)
             {
                 case CharacterName.nZombie:
-                    FactoryManager.EnemyFactory.CreateCharacter<EnemyZombie>(mPosition,t, GameFacade.Insance.Currform);
+                    FactoryManager.EnemyFactory.CreateCharacter<EnemyZombie>(mPosition,t, GameFacade.Instance.Currform);
                     break;
                 case CharacterName.nConeheadZombie:
-                    FactoryManager.EnemyFactory.CreateCharacter<EnemyConeheadZombie>(mPosition, t, GameFacade.Insance.Currform);
+                    FactoryManager.EnemyFactory.CreateCharacter<EnemyConeheadZombie>(mPosition, t, GameFacade.Instance.Currform);
                     break;
                 default:
                     break;

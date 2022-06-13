@@ -36,7 +36,7 @@ namespace Zombie
         }
         public  void AddInCharacterSystem()
         {
-            GameFacade.Insance.AddBullet(mBullet as IBullet);
+            GameFacade.Instance.AddBullet(mBullet as IBullet);
         }
         public IBullet GetResult()
         {

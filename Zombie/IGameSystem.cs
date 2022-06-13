@@ -10,7 +10,7 @@ namespace Zombie
         protected GameFacade mFacade;
         public virtual void Init()
         {
-            mFacade = GameFacade.Insance;
+            mFacade = GameFacade.Instance;
         }
         public virtual void Update() { }
         public virtual void Release() { }

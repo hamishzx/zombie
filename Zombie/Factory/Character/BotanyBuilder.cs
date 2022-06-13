@@ -29,7 +29,7 @@ namespace Zombie
 
         public override void AddInCharacterSystem()
         {
-            GameFacade.Insance.AddBotany (mCharacter as IBotany);
+            GameFacade.Instance.AddBotany (mCharacter as IBotany);
         }
 
         public override ICharacter GetResult()
