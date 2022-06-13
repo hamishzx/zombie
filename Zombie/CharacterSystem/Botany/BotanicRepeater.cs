@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using Zombie.Properties;
 
 
 namespace Zombie
@@ -16,8 +17,8 @@ namespace Zombie
 
         public BotanicRepeater()
         {
-            idleimg = "images/Plants/Peashooter/Peashooter.gif";
-            Image t=Image.FromFile(idleimg);
+            idleimg = Resources.Peashooter;
+            Image t = idleimg;
             imgwidth = t.Width;
             imgheight = t.Height;
             des = new Point();

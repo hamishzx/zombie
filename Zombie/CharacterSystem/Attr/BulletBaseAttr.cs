@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 
@@ -16,11 +17,11 @@ namespace Zombie
         private int moveSpeed;
         private int damage;
         private int range;
-        private string flyimg;
-        private string boomimg;
+        private Bitmap flyimg;
+        private Bitmap boomimg;
         private Bulletype mtype;
 
-        public BulletBaseAttr(Bulletype itype,int speed,int damage,int range,string flyimg,string boomimg)
+        public BulletBaseAttr(Bulletype itype,int speed,int damage,int range,Bitmap flyimg,Bitmap boomimg)
         {
             this.mtype = itype;
             this.moveSpeed = speed;
@@ -30,7 +31,7 @@ namespace Zombie
             this.boomimg = boomimg;
         }
 
-        public string Flyimg
+        public Bitmap Flyimg
         {
             get
             {
@@ -38,7 +39,7 @@ namespace Zombie
             }
         }
 
-        public string Boomimg
+        public Bitmap Boomimg
         {
             get
             {
