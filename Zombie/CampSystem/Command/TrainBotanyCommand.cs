@@ -24,6 +24,14 @@ namespace Zombie
                 case CharacterName.nPeashooter:
                     FactoryManager.BotanyFactory.CreateCharacter<BotanicRepeater>(mPosition, RowPos, GameFacade.Insance.Currform);
                     break;
+                case CharacterName.nRepeater:
+                    FactoryManager.BotanyFactory.CreateCharacter<Repeater>(mPosition, RowPos,
+                        GameFacade.Insance.Currform);
+                    break;
+                case CharacterName.nThreePeashooter:
+                    FactoryManager.BotanyFactory.CreateCharacter<ThreePeashooter>(mPosition, RowPos,
+                        GameFacade.Insance.Currform);
+                    break;
                 default:
                     break;
             }
