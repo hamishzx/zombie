@@ -18,9 +18,8 @@ namespace Zombie
         public BotanicRepeater()
         {
             idleimg = Resources.Peashooter;
-            Image t = idleimg;
-            imgwidth = t.Width;
-            imgheight = t.Height;
+            imgwidth = idleimg.Width;
+            imgheight = idleimg.Height;
             des = new Point();
         }
         protected override void PlayEffect()

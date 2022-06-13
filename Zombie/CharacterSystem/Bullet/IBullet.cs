@@ -116,7 +116,6 @@ namespace Zombie
             Image bm = attr.Flyimg;
             this.imgheight = bm.Height;
             this.imgwidth = bm.Width;
-            bm.Dispose();
             Activa = true;
             
         }
