@@ -93,6 +93,16 @@ namespace Zombie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DPB00 {
+            get {
+                object obj = ResourceManager.GetObject("DPB00", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo {
             get {
                 object obj = ResourceManager.GetObject("Logo", resourceCulture);
@@ -116,6 +126,16 @@ namespace Zombie.Properties {
         internal static System.Drawing.Bitmap Peashooter {
             get {
                 object obj = ResourceManager.GetObject("Peashooter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TPB00 {
+            get {
+                object obj = ResourceManager.GetObject("TPB00", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

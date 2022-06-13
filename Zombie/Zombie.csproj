@@ -212,6 +212,8 @@
   <ItemGroup>
     <Content Include="Resources\card_repeaterpea.png" />
     <Content Include="Resources\card_threepeashooter.png" />
+    <Content Include="Resources\DPB00.gif" />
+    <Content Include="Resources\TPB00.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

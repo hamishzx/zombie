@@ -7,7 +7,9 @@ namespace Zombie
 {
     public enum Bulletype
     {
-        single
+        single,
+        doubleBlt,
+        triple
     }
     public class BulletBaseAttr
     {
