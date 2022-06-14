@@ -7,8 +7,7 @@ using System.Windows.Forms;
 /*  TODO: Work as below
     1.增加僵尸的种类 Merged
     2.增加植物的种类 Merged
-    3.增加金钱系统 Merged 
-    4.使用内置资源显示图片 Merged*/
+    3.增加金钱系统 Merged */
 
 namespace Zombie
 {

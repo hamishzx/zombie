@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
-using Zombie.Properties;
 
 
 namespace Zombie
@@ -13,11 +12,12 @@ namespace Zombie
         public EnemyConeheadZombie()
         {
             AtkRange = 11;
-            attackimg = Resources.ConeheadZombieAttack;
-            chaseimg = Resources.ConeheadZombie;
-            Image bm = chaseimg;
+            attackimg = "images/Zombies/ConeheadZombie/ConeheadZombieAttack.gif";
+            chaseimg = "images/Zombies/ConeheadZombie/ConeheadZombie.gif";
+            Image bm = Image.FromFile(chaseimg);
             base.imgheight = bm.Height;
             base.imgwidth = bm.Width;
+            bm.Dispose();
         }
         public override void PlayEffect()
         {
