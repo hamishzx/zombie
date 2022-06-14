@@ -118,31 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <!-- Bullet -->
-  <data name="SingleBullet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bullet\PB00.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PB00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PB00.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DoubleBullet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bullet\TPB00.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TripleBullet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bullet\DPB00.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <!-- Card -->
-  <data name="PeashooterCard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Card\Peashooter.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RepeaterCard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Card\card_repeaterpea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ThreePeashooterCard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Card\card_threepeashooter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <!-- Plant -->
-  <data name="Peashooter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Plant\Peashooter\Peashooter.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <!-- Misc -->
   <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,5 +129,20 @@
   </data>
   <data name="ZombiesWon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ZombiesWon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Peashooter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Peashooter.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="card_repeaterpea" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\card_repeaterpea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="card_threepeashooter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\card_threepeashooter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TPB00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TPB00.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DPB00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DPB00.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
