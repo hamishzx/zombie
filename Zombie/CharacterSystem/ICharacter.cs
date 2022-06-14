@@ -14,10 +14,10 @@ namespace Zombie
         private int  posRow;
         private int atkRange;
         private AnimateImage mAnim;
-        private Bitmap stateImage;
-        protected Bitmap attackimg;
-        protected Bitmap chaseimg;
-        protected Bitmap idleimg;
+        private string stateImage;
+        protected string attackimg;
+        protected string chaseimg;
+        protected string idleimg;
         protected int imgheight;
         protected int imgwidth;
 
@@ -26,7 +26,7 @@ namespace Zombie
         public bool isKilled { get { return mIsKilled; } }
         public Point Position { get => position; set => position = value; }
         public int AtkRange { get => atkRange; set => atkRange = value; }
-        public Bitmap StateImage { get => stateImage; set => stateImage = value; }
+        public string StateImage { get => stateImage; set => stateImage = value; }
         public AnimateImage MAnim { get => mAnim; set => mAnim = value; }
         public int PosRow {
             get { return posRow; }
@@ -82,12 +82,12 @@ namespace Zombie
         {
             //GameObject.Destroy(mGameObject);
         }
-        public void PlayAnim(Bitmap animImg)
+        public void PlayAnim(string animName)
         {
-            if (StateImage != animImg)
+            if (StateImage != animName)
             {
-                StateImage = animImg;
-                MAnim.changeImage(animImg);
+                StateImage = animName;
+                MAnim.changeImage(animName);
             }  
         }
         public int GetSpeed()

@@ -13,7 +13,6 @@
 
 using System;
 using System.Drawing;
-using Zombie.Properties;
 
 namespace Zombie
 {
@@ -23,8 +22,8 @@ namespace Zombie
 
         public ThreePeashooter()
         {
-            idleimg = Resources.ThreePeashooter;
-            Image img = idleimg;
+            idleimg = "images/Plants/Threepeater/Threepeater.gif";
+            Image img = Image.FromFile(idleimg);
             imgwidth = img.Width;
             imgheight = img.Height;
             _point = new Point();
