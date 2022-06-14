@@ -24,8 +24,9 @@ namespace Zombie
         public ThreePeashooter()
         {
             idleimg = Resources.ThreePeashooter;
-            imgwidth = idleimg.Width;
-            imgheight = idleimg.Height;
+            Image img = idleimg;
+            imgwidth = img.Width;
+            imgheight = img.Height;
             _point = new Point();
         }
 

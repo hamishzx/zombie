@@ -18,6 +18,7 @@ namespace Zombie
             Image bm = chaseimg;
             base.imgheight = bm.Height;
             base.imgwidth = bm.Width;
+            bm.Dispose();
         }
         public override void PlayEffect()
         {

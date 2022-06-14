@@ -23,9 +23,9 @@ namespace Zombie
 
         public Repeater()
         {
-            idleimg = Resources.Repeater;
-            imgwidth = idleimg.Width;
-            imgheight = idleimg.Height;
+            Image img = Resources.Repeater;
+            imgwidth = img.Width;
+            imgheight = img.Height;
             _point = new Point();
         }
 
