@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Text;
 
 
@@ -41,7 +40,6 @@ namespace Zombie
         {
             base.Update();
             mRootHandler.Handle(mLv);
-            Debug.WriteLine(GetHouseHP());
         }
 
         private void InitStageChain()
