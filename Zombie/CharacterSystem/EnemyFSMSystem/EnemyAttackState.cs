@@ -41,7 +41,7 @@ namespace Zombie
 
         public override void Reason(List<ICharacter> targets)
         {
-            
+            if(mCharacter.Position.X <= 50) return; // do not perform transition if attacking base
             if (targets == null)
             {
                 mFSM.PerformTransition(EnemyTransition.LostSoldier);

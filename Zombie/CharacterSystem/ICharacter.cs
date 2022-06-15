@@ -73,6 +73,7 @@ namespace Zombie
         
         public void AttackBase()
         {
+            PlayAnim(attackimg);
             GameFacade.Instance.MStageSystem.BaseUnderAttack(attr.MBaseAttr.Damage);
         }
         
