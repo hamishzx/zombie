@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 
@@ -9,7 +10,7 @@ namespace Zombie
     {
         int mLv = 1;
         private int mCountOfEnemyKilled=0;
-        private int _houseHP = 0;
+        private int _currentHouseHealthPoint = 200;
         IStageHandler mRootHandler;
 
         public int CountOfEnemyKilledBefore { get; set; } = 0;
@@ -24,8 +25,8 @@ namespace Zombie
 
         public int houseHP
         {
-            get => _houseHP;
-            set => _houseHP = value;
+            get => _currentHouseHealthPoint;
+            set => _currentHouseHealthPoint = value < 0 ? 0 : value;
         }
         
         public override void Init()
@@ -40,6 +41,7 @@ namespace Zombie
         {
             base.Update();
             mRootHandler.Handle(mLv);
+            Debug.WriteLine(GetHouseHP());
         }
 
         private void InitStageChain()
@@ -55,7 +57,6 @@ namespace Zombie
                 .SetNextHandler(handler3);
             mRootHandler = handler1;
 
-            houseHP = 200;
         }
         public int CountOfEnemyKilled
         {
@@ -78,7 +79,17 @@ namespace Zombie
 
         public int GetHouseHP()
         {
-            return houseHP;
+            return _currentHouseHealthPoint;
+        }
+
+        public void GameOver()
+        {
+            GameFacade.Instance.NotifySubject(GameEventType.GameOver);
+        }
+
+        public void BaseUnderAttack(int damage)
+        {
+            houseHP -= damage;
         }
     }
 }

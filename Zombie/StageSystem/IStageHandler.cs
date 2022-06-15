@@ -28,6 +28,7 @@ namespace Zombie
             {
                 UpdateStage();
                 CheckIsFinished();//检查关卡是否结束
+                CheckIsGameOver();
             }
             else
             {
@@ -40,6 +41,14 @@ namespace Zombie
             if (mStageSystem.GetCountOfEnemyKilled() - mStageSystem.CountOfEnemyKilledBefore >= mCountToFinished)
             {
                 mStageSystem.EnterNextStage();
+            }
+        }
+
+        private void CheckIsGameOver()
+        {
+            if (mStageSystem.GetHouseHP() == 0)
+            {
+                mStageSystem.GameOver();
             }
         }
     }

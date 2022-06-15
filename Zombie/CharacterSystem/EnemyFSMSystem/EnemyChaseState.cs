@@ -47,7 +47,7 @@ namespace Zombie
                             distance = temp;
                     }
                 }
-                if (distance <= mCharacter.AtkRange)
+                if (mCharacter.Position.X <= 50 || distance <= mCharacter.AtkRange)
                 {
                     mFSM.PerformTransition(EnemyTransition.CanAttack);
                 }

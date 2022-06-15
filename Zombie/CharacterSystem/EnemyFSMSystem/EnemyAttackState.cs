@@ -17,6 +17,10 @@ namespace Zombie
 
         public override void Act(List<ICharacter> targets)
         {
+            if (mCharacter.Position.X <= 50)
+            {
+                mCharacter.AttackBase();
+            }
             if (targets == null || targets.Count == 0) return;
             mAttackTimer += 0.1f;
             if (mAttackTimer >= mAttackTime)
