@@ -73,9 +73,9 @@ namespace Zombie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ConeheadZombie {
+        internal static System.Drawing.Bitmap card_repeaterpea {
             get {
-                object obj = ResourceManager.GetObject("ConeheadZombie", resourceCulture);
+                object obj = ResourceManager.GetObject("card_repeaterpea", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Zombie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ConeheadZombieAttack {
+        internal static System.Drawing.Bitmap card_threepeashooter {
             get {
-                object obj = ResourceManager.GetObject("ConeheadZombieAttack", resourceCulture);
+                object obj = ResourceManager.GetObject("card_threepeashooter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Zombie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DoubleBullet {
+        internal static System.Drawing.Bitmap DPB00 {
             get {
-                object obj = ResourceManager.GetObject("DoubleBullet", resourceCulture);
+                object obj = ResourceManager.GetObject("DPB00", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Zombie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PeaBulletHit {
+        internal static System.Drawing.Bitmap PB00 {
             get {
-                object obj = ResourceManager.GetObject("PeaBulletHit", resourceCulture);
+                object obj = ResourceManager.GetObject("PB00", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,89 +133,9 @@ namespace Zombie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PeashooterCard {
+        internal static System.Drawing.Bitmap TPB00 {
             get {
-                object obj = ResourceManager.GetObject("PeashooterCard", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Repeater {
-            get {
-                object obj = ResourceManager.GetObject("Repeater", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap RepeaterCard {
-            get {
-                object obj = ResourceManager.GetObject("RepeaterCard", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap SingleBullet {
-            get {
-                object obj = ResourceManager.GetObject("SingleBullet", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ThreePeashooter {
-            get {
-                object obj = ResourceManager.GetObject("ThreePeashooter", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ThreePeashooterCard {
-            get {
-                object obj = ResourceManager.GetObject("ThreePeashooterCard", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap TripleBullet {
-            get {
-                object obj = ResourceManager.GetObject("TripleBullet", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Zombie {
-            get {
-                object obj = ResourceManager.GetObject("Zombie", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ZombieAttack {
-            get {
-                object obj = ResourceManager.GetObject("ZombieAttack", resourceCulture);
+                object obj = ResourceManager.GetObject("TPB00", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

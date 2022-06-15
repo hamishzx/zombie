@@ -28,11 +28,11 @@ namespace Zombie
             iform = (Form)oj;
             //mCanAnimate = ImageAnimator.CanAnimate(image);
         }
-        public void changeImage(Bitmap _image)
+        public void changeImage(string path)
         {
             Stop();
-            image = _image;
-            ImageAnimator.Animate(_image, new EventHandler(FrameChanged));
+            image = new Bitmap(path);
+            ImageAnimator.Animate(image, new EventHandler(FrameChanged));
             Start();
         }
         public Image Image

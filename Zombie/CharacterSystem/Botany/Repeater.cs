@@ -13,7 +13,6 @@
 
 using System;
 using System.Drawing;
-using Zombie.Properties;
 
 namespace Zombie
 {
@@ -23,9 +22,10 @@ namespace Zombie
 
         public Repeater()
         {
-            idleimg = Resources.Repeater;
-            imgwidth = idleimg.Width;
-            imgheight = idleimg.Height;
+            idleimg = "images/Plants/Repeater/Repeater.gif";
+            Image img = Image.FromFile(idleimg);
+            imgwidth = img.Width;
+            imgheight = img.Height;
             _point = new Point();
         }
 

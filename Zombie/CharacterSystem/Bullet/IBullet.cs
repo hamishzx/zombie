@@ -19,7 +19,7 @@ namespace Zombie
         private int directionX;
         private int directionY;
         private AnimateImage mAnim;
-        private Bitmap currimg;
+        private string currimg;
         protected float mDestroyTimer;
         private bool mCanDestroy;
         public AnimateImage MAnim
@@ -113,9 +113,10 @@ namespace Zombie
                 area = new Rectangle(targetPosition.X, targetPosition.Y, position.X - targetPosition.X, position.Y - targetPosition.Y);
             else
                 area = new Rectangle(position.X-1, position.Y-1, targetPosition.X - position.X, targetPosition.Y - position.Y+2);
-            Image bm = attr.Flyimg;
+            Image bm = Image.FromFile(attr.Flyimg);
             this.imgheight = bm.Height;
             this.imgwidth = bm.Width;
+            bm.Dispose();
             Activa = true;
             
         }
@@ -125,12 +126,12 @@ namespace Zombie
             PlayAnim(attr.Boomimg);//播放动画
             target.UnderAttack(attr.Damage);
         }
-        public void PlayAnim(Bitmap animImg)
+        public void PlayAnim(string animName)
         {
-            if (currimg != animImg)
+            if (currimg != animName)
             {
-                currimg = animImg;
-                mAnim.changeImage(animImg);
+                currimg = animName;
+                mAnim.changeImage(animName);
             }
         }
         public virtual void FlyTo()
