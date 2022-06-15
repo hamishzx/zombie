@@ -32,6 +32,11 @@ namespace Zombie
 
         public override void Reason(List<ICharacter> targets)
         {
+            if (mCharacter.Position.X <= 50)
+            {
+                mFSM.PerformTransition(EnemyTransition.CanAttack);
+            }
+            
             if (targets != null && targets.Count > 0)
             {
                 //float distance = mCharacter.Position.X- targets[0].Position.X;

@@ -19,6 +19,7 @@ namespace Zombie
         public Form Currform { get => currform; set => currform = value; }
         public CampSystem MCampSystem { get => mCampSystem;}
         public EconomySystem MEconomySystem => mEconomySystem;
+        public StageSystem MStageSystem => mStageSystem;
         public int[] enyrowPos;
         public int[] botanyrowPos;
         private GameFacade() { }
