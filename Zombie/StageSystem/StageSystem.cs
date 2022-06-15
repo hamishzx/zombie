@@ -10,7 +10,7 @@ namespace Zombie
     {
         int mLv = 1;
         private int mCountOfEnemyKilled=0;
-        private int _currentHouseHealthPoint = 200;
+        private int _currentHouseHealthPoint = 2000;
         IStageHandler mRootHandler;
 
         public int CountOfEnemyKilledBefore { get; set; } = 0;
