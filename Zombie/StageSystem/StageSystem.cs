@@ -9,6 +9,7 @@ namespace Zombie
     {
         int mLv = 1;
         private int mCountOfEnemyKilled=0;
+        private int _houseHP = 0;
         IStageHandler mRootHandler;
 
         public int CountOfEnemyKilledBefore { get; set; } = 0;
@@ -20,6 +21,13 @@ namespace Zombie
                 mCountOfEnemyKilled = value;
             }
         }
+
+        public int houseHP
+        {
+            get => _houseHP;
+            set => _houseHP = value;
+        }
+        
         public override void Init()
         {
             base.Init();
@@ -46,6 +54,8 @@ namespace Zombie
             handler1.SetNextHandler(handler2)
                 .SetNextHandler(handler3);
             mRootHandler = handler1;
+
+            houseHP = 200;
         }
         public int CountOfEnemyKilled
         {
@@ -64,6 +74,11 @@ namespace Zombie
             mLv++;
             GameFacade.Instance.NotifySubject(GameEventType.NewStage);
            // mFacade.NotifySubject(GameEventType.NewStage);
+        }
+
+        public int GetHouseHP()
+        {
+            return houseHP;
         }
     }
 }
