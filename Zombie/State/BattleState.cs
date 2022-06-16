@@ -21,7 +21,7 @@ namespace Zombie
 
         public override void Handle(SceneStateController context)
         {
-            context.MState = new MainMenuState("Zombie.MainMenuForm");
+            context.MState = new MainMenuState(context.targetForm);
         }
 
         public override void StartState()

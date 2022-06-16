@@ -19,7 +19,7 @@ namespace Zombie
 
         public override void Handle(SceneStateController context)
         {
-            context.MState = new BattleState("Zombie.BattleForm");
+            context.MState = new BattleState(context.targetForm);
         }
 
         public override void StartState()
