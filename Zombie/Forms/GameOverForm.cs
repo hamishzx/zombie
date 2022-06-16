@@ -37,7 +37,7 @@ namespace Zombie.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SceneStateController.controll.Request();
+            SceneStateController.controll.Request("Zombie.MainMenuForm");
         }
 
         private void button2_Click(object sender, EventArgs e)
