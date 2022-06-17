@@ -82,7 +82,7 @@ namespace Zombie
 
         public void GameOver()
         {
-            GameFacade.Instance.NotifySubject(GameEventType.GameOver);
+            GameFacade.Instance.GameOver();
         }
 
         public void BaseUnderAttack(int damage)
