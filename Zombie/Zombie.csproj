@@ -91,6 +91,12 @@
     <Compile Include="Factory\Bullet\IBulletFactory.cs" />
     <Compile Include="Factory\Character\BotanyBuilder.cs" />
     <Compile Include="Factory\Character\EnemyBuilder.cs" />
+    <Compile Include="Forms\GameOverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GameOverForm.Designer.cs">
+      <DependentUpon>GameOverForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameFacade.cs" />
     <Compile Include="IGameSystem.cs" />
     <Compile Include="CharacterSystem\BotanyFSMSystem\BotanyAttackState.cs" />
@@ -130,6 +136,7 @@
     <Compile Include="StageSystem\NormalStageHandler.cs" />
     <Compile Include="StageSystem\StageSystem.cs" />
     <Compile Include="State\BattleState.cs" />
+    <Compile Include="State\GameOverState.cs" />
     <Compile Include="State\ISceneState.cs" />
     <Compile Include="Forms\MainMenuForm.cs">
       <SubType>Form</SubType>
@@ -157,6 +164,9 @@
     <EmbeddedResource Include="Forms\BattleForm.resx">
       <DependentUpon>BattleForm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GameOverForm.resx">
+      <DependentUpon>GameOverForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>

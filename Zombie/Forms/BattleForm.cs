@@ -78,7 +78,7 @@ namespace Zombie
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SceneStateController.controll.Request();
+            SceneStateController.controll.Request("Zombie.MainMenuForm");
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -127,5 +127,12 @@ namespace Zombie
             }
                 return blt;
         }
+
+        public void GameOver()
+        {
+            mIsGameOver = true;
+            SceneStateController.controll.Request("Zombie.GameOverForm");
+            Release();
+        }
     }
 }
