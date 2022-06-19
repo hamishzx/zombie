@@ -21,7 +21,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Zombie.Forms
+namespace Zombie
 {
     public partial class GameOverForm : Form
     {

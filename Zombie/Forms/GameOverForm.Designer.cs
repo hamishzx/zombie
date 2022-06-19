@@ -11,7 +11,7 @@
 
 #endregion
 
-namespace Zombie.Forms
+namespace Zombie
 {
     partial class GameOverForm
     {
@@ -31,6 +31,14 @@ namespace Zombie.Forms
                 components.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        private void InitialzeComponent()
+        {
+            this.Name = "GameOverForm";
+            this.Load += new System.EventHandler(this.GameOverForm_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
         #region Windows Form Designer generated code
